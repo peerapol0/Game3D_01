@@ -1,0 +1,178 @@
+[gd_scene load_steps=14 format=3 uid="uid://c437nc36cl3vw"]
+
+[ext_resource type="Script" uid="uid://cjmfbn6r44b2r" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://du41y3lmjaavd" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dqrl8y6r1hlol" path="res://mob.tscn" id="2_1bvp3"]
+[ext_resource type="FontFile" uid="uid://di8nvvbhg6x03" path="res://fonts/Montserrat-Medium.ttf" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://ds8myk8ywfvqi" path="res://score_label.gd" id="5_7mycd"]
+[ext_resource type="FontFile" uid="uid://c5wyj2n1eitm6" path="res://fonts/THSarabunNew Bold.ttf" id="6_7mycd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_ig7tw")
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_color = Color(0.968627, 0.545098, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7mycd"]
+material = SubResource("StandardMaterial3D_lquwl")
+
+[sub_resource type="Curve3D" id="Curve3D_272bh"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -18.1404, 0, -16.0996, 0, 0, 0, 0, 0, 0, 17.9231, 0, -15.9545, 0, 0, 0, 0, 0, 0, 17.9957, 0, 15.8279, 0, 0, 0, 0, 0, 0, -18.0273, 0, 16.0727),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="Theme" id="Theme_272bh"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_h2yge")
+mob_scene = ExtResource("2_1bvp3")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_7dm0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_ig7tw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.77878, 0.627297, 0, -0.627297, 0.77878, 0.079546, 4.47643, 0.113496)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CamaraPrivot" type="Marker3D" parent="Player"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/CamaraPrivot"]
+transform = Transform3D(1, 0, 0, 0, 0.793162, 0.609011, 0, -0.609011, 0.793162, 0, 16, 17.9037)
+fov = 37.7
+
+[node name="Cylinders" type="Node3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -16)
+visible = false
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -16)
+visible = false
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 16)
+visible = false
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 16)
+visible = false
+mesh = SubResource("CylinderMesh_7mycd")
+
+[node name="SpawnPath" type="Path3D" parent="."]
+curve = SubResource("Curve3D_272bh")
+
+[node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
+transform = Transform3D(-0.00402347, 0, -0.999992, 0, 1, 0, 0.999992, 0, -0.00402347, -18.1404, 0, -16.0996)
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_272bh")
+
+[node name="ScoreLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 36.0
+offset_right = 105.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("4_lquwl")
+theme_override_font_sizes/font_size = 22
+text = "Score: 0"
+script = ExtResource("5_7mycd")
+
+[node name="Name" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_7mycd")
+theme_override_font_sizes/font_size = 30
+text = "นายพีรพล แก้วเจริญสันติสุข 673380287-8"
+
+[node name="Retry" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Retry" type="Label" parent="UI/Retry"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.5
+offset_top = -34.5
+offset_right = 64.5
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_lquwl")
+theme_override_font_sizes/font_size = 50
+text = "Retry"
+vertical_alignment = 1
+
+[node name="Retry2" type="Label" parent="UI/Retry"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = 41.0
+offset_right = 237.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_lquwl")
+theme_override_font_sizes/font_size = 30
+text = "------press spacebar to retry-----"
+vertical_alignment = 1
+
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

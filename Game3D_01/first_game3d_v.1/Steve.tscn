@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccnstmbfijpb0"]
+
+[ext_resource type="PackedScene" uid="uid://cmn868j3xijqj" path="res://asset/Steve.glb" id="1_jxrp4"]
+
+[node name="Root Scene" instance=ExtResource("1_jxrp4")]
+
+[node name="Skeleton3D" parent="RootNode/CharacterArmature" index="0"]
+bones/1/rotation = Quaternion(6.99994e-06, 0.702952, 0.711237, 7.31034e-06)
+bones/6/rotation = Quaternion(0.201508, 4.29216e-07, 1.24737e-07, 0.979487)
+bones/7/rotation = Quaternion(-0.0160369, -8.32331e-07, -3.67115e-09, 0.999871)
+bones/9/rotation = Quaternion(-0.0849531, -0.000274479, 2.33391e-05, 0.996385)
+bones/13/rotation = Quaternion(-0.525678, -0.51139, -0.460496, 0.500087)
+bones/14/rotation = Quaternion(-0.0153203, 0.25883, -0.238243, 0.935956)
+bones/19/rotation = Quaternion(-0.525678, 0.51139, 0.460496, 0.500087)
+bones/20/rotation = Quaternion(-0.0153195, -0.258831, 0.238243, 0.935955)
+bones/21/rotation = Quaternion(0.0123971, -0.0182084, 0.00824093, 0.999723)
+bones/24/rotation = Quaternion(0.93648, 0.0119229, 0.00476592, 0.350487)
+bones/25/rotation = Quaternion(0.620133, 0.00798616, 0.0120978, 0.784363)
+bones/28/rotation = Quaternion(0.93648, -0.011923, -0.00476496, 0.350487)
+bones/29/rotation = Quaternion(0.620132, -0.00798624, -0.0120978, 0.784363)
+bones/35/rotation = Quaternion(-8.38853e-06, 0.702952, 0.711237, -7.99735e-06)
