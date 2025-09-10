@@ -1,0 +1,38 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1757495523
+icon.svg::CompressedTexture2D/CompressedTexture2D::6179827941960638405::1757491539::1757491606::1::::<><><>0<>0<>4fe0667d37cb98fc3caecdc481e95501<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.gd::GDScript::5429619595439734723::1757494477::0::1::::<>Node3D<><>0<>0<><>::
+main.tscn::PackedScene::6868086718804965672::1757495114::0::1::::<><><>0<>0<><>::uid://cjmfbn6r44b2r::::res://main.gd<>uid://dqrl8y6r1hlol::::res://mob.tscn<>uid://x2o5oxg6yhxq::::res://steveV.2.tscn<>uid://di8nvvbhg6x03::::res://fonts/Montserrat-Medium.ttf<>uid://ds8myk8ywfvqi::::res://score_label.gd<>uid://c5wyj2n1eitm6::::res://fonts/THSarabunNew Bold.ttf
+mob.gd::GDScript/GDScript::4263034384953620569::1757491539::0::1::::<>CharacterBody3D<><>0<>0<><>::
+mob.tscn::PackedScene::8318106098482905803::1757495114::0::1::::<><><>0<>0<><>::uid://b10bs23dl4erp::::res://mob.gd<>uid://jv3imvgvudip::::res://asset/Zombie.glb
+mob_v_2.tscn::PackedScene::5559516955088732148::1757495466::0::1::::<><><>0<>0<><>::uid://jv3imvgvudip::::res://asset/Zombie.glb
+music_player.tscn::PackedScene/PackedScene::7946557221048788218::1757491539::0::1::::<><><>0<>0<><>::uid://bkfaacqylvtl5::::res://art/House In a Forest Loop.ogg
+player.gd::GDScript::41391637780113989::1757495114::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.tscn::PackedScene/PackedScene::8624528867777235357::1757492585::0::1::::<><><>0<>0<><>::uid://cmn868j3xijqj::::res://asset/Steve.glb
+score_label.gd::GDScript/GDScript::8491557742746891844::1757491539::0::1::::<>Label<><>0<>0<><>::
+Steve.tscn::PackedScene/PackedScene::4941183433482278431::1757492933::0::1::::<><><>0<>0<><>::uid://ubyjv8broxh::::res://player.gd<>uid://bbfx6uu8802i::::res://asset/Steve_Atlas.png
+steveV.2.tscn::PackedScene::1670985985922630890::1757495114::0::1::::<><><>0<>0<><>::uid://cmn868j3xijqj::::res://asset/Steve.glb<>uid://ubyjv8broxh::::res://player.gd
+zombie.tscn::PackedScene/PackedScene::8022248973853199319::1757491539::0::1::::<><><>0<>0<><>::uid://jv3imvgvudip::::res://asset/Zombie.glb
+::res://art/::1757491607
+body.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
+eye.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
+House In a Forest Loop.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::3098631139713292344::1757491539::1757491606::1::::<><><>0<>0<>57c992fa1414f01fb8c5e78c985c2ecf<>res://.godot/imported/House In a Forest Loop.ogg-1a6a72ae843ad792b7039931227e8d50.oggvorbisstr::
+mob.glb::PackedScene/PackedScene::8461853483026994906::1757491539::1757491607::1::::<><><>0<>0<>050a9f3e7ee623d268d239a09d0c43e2<>res://.godot/imported/mob.glb-3afb43c03b9d1598b6af5154e2543eac.scn::
+mob_body.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
+mob_eye.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
+player.glb::PackedScene/PackedScene::5421085625153052635::1757491539::1757491607::1::::<><><>0<>0<>767adbf7e5c174b9c287c7be9f3b7fb4<>res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn::
+pupil.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
+::res://asset/::1757495523
+Steve01.glb::PackedScene/PackedScene::4605336048938482585::1757493292::1757493293::1::::<><><>0<>0<>2983cb1e6e23d7489cb4d49ab68f8167<>res://.godot/imported/Steve01.glb-0bb747209e7dd954c21abccf675b27ad.scn::uid://bf7lcqdrb7mrq::::res://asset/Steve01_Atlas.png
+Steve01_Atlas.png::CompressedTexture2D/CompressedTexture2D::2804097294304442994::1757493293::1757493293::1::::<><><>0<>0<>8530bbe0e9b98e0d037dedb8fd5b274d<>res://.godot/imported/Steve01_Atlas.png-df94ed8409704c0dc66555d83d059d37.s3tc.ctex::
+Steve.glb::PackedScene/PackedScene::5644005170694760381::1757491539::1757494262::1::::<><><>0<>0<>b12554cfb6c57f70dc63beac545e0754<>res://.godot/imported/Steve.glb-7c41f95ff2b351a75e38c1ba87a966cd.scn::uid://bbfx6uu8802i::::res://asset/Steve_Atlas.png
+Steve_Atlas.png::CompressedTexture2D/CompressedTexture2D::72599539689814298::1757491539::1757491607::1::::<><><>0<>0<>f3158ad98b1d637b08a2826221e58c28<>res://.godot/imported/Steve_Atlas.png-fec2ce055834e3e36d411cf460f565f2.s3tc.ctex::
+Zombie.glb::PackedScene/PackedScene::676766550748806811::1757491539::1757495523::1::::<><><>0<>0<>d0ffd192b869487c3addad708d759953<>res://.godot/imported/Zombie.glb-db2d01a4b1c2203c1eacce0a068a1fa3.scn::uid://dvttsy3gbmjq6::::res://asset/Zombie_Atlas.png
+Zombie_Atlas.png::CompressedTexture2D/CompressedTexture2D::8673638016047328531::1757491539::1757495523::1::::<><><>0<>0<>f7e304d7b3891fd1b6fbb32e3e5c0f65<>res://.godot/imported/Zombie_Atlas.png-3952c1d00f36132be63ebb600e3b9bfb.s3tc.ctex::
+::res://fonts/::1757491606
+LICENSE.txt::TextFile/TextFile::-1::1757491539::0::1::::<><><>0<>0<><>::
+Montserrat-Medium.ttf::FontFile/FontFile::7789725193507971010::1757491539::1757491606::1::::<><><>0<>0<>a8f05bb0c9053adb4c5334d9ddcc8a1f<>res://.godot/imported/Montserrat-Medium.ttf-e832861e4ad4110e172112dc430c04b0.fontdata::
+THSarabunNew Bold.ttf::FontFile/FontFile::6925397706487942403::1757491539::1757491606::1::::<><><>0<>0<>226d5993b785a7dae8a42d699d87a0ff<>res://.godot/imported/THSarabunNew Bold.ttf-4a1d586056649eea25686432c428a2ca.fontdata::
+THSarabunNew BoldItalic.ttf::FontFile/FontFile::6034059175253967563::1757491539::1757491606::1::::<><><>0<>0<>572f945293779080e0fcd8d8f8324de7<>res://.godot/imported/THSarabunNew BoldItalic.ttf-1a892c4505679fc3f461e24ac137b72d.fontdata::
+THSarabunNew Italic.ttf::FontFile/FontFile::8221060510641646513::1757491539::1757491606::1::::<><><>0<>0<>15dc730fe31a323a35d76ab5b9e8475d<>res://.godot/imported/THSarabunNew Italic.ttf-fc9174bb58b442cd36820ae3fbe94659.fontdata::
+THSarabunNew.ttf::FontFile/FontFile::9136857133160599858::1757491539::1757491606::1::::<><><>0<>0<>45f756120e83437b7b0c1a7641e6f693<>res://.godot/imported/THSarabunNew.ttf-392cd31ba04e4af707fb84891edb73a0.fontdata::

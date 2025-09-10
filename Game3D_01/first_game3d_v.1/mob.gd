@@ -1,9 +1,9 @@
 extends CharacterBody3D
 
 # Minimum speed of the mob in meters per second.
-@export var min_speed = 10
+@export var min_speed = 5
 # Maximum speed of the mob in meters per second.
-@export var max_speed = 18
+@export var max_speed = 10
 # Emitted when the player jumped on the mob.
 signal squashed
 
@@ -26,6 +26,8 @@ func initialize(start_position, player_position):
 	# We then rotate the velocity vector based on the mob's Y rotation
 	# in order to move in the direction the mob is looking.
 	velocity = velocity.rotated(Vector3.UP, rotation.y)
+	$AnimationPlayer.play("EnemyArmature|EnemyArmature|EnemyArmature|Run")
+	$AnimationPlayer.get_animation("EnemyArmature|EnemyArmature|EnemyArmature|Run").loop = true
 
 func squash():
 	squashed.emit()

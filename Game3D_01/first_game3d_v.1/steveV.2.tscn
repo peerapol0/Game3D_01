@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://x2o5oxg6yhxq"]
+
+[ext_resource type="PackedScene" uid="uid://cmn868j3xijqj" path="res://asset/Steve.glb" id="1_3rfhq"]
+[ext_resource type="Script" uid="uid://ubyjv8broxh" path="res://player.gd" id="2_kpvr4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p0shb"]
+size = Vector3(2.3103, 2.50095, 0.840531)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kqkdr"]
+height = 1.89209
+
+[node name="Steve" instance=ExtResource("1_3rfhq")]
+collision_mask = 6
+script = ExtResource("2_kpvr4")
+
+[node name="Skeleton3D" parent="RootNode/CharacterArmature" index="0"]
+bones/1/rotation = Quaternion(6.99994e-06, 0.702952, 0.711237, 7.31034e-06)
+bones/6/rotation = Quaternion(0.201508, 4.29216e-07, 1.24737e-07, 0.979487)
+bones/7/rotation = Quaternion(-0.0160369, -8.32331e-07, -3.67115e-09, 0.999871)
+bones/9/rotation = Quaternion(-0.0849531, -0.000274479, 2.33391e-05, 0.996385)
+bones/13/rotation = Quaternion(-0.525678, -0.51139, -0.460496, 0.500087)
+bones/14/rotation = Quaternion(-0.0153203, 0.25883, -0.238243, 0.935955)
+bones/19/rotation = Quaternion(-0.525678, 0.51139, 0.460496, 0.500087)
+bones/20/rotation = Quaternion(-0.0153195, -0.258831, 0.238243, 0.935955)
+bones/21/rotation = Quaternion(0.0123971, -0.0182084, 0.00824093, 0.999723)
+bones/24/rotation = Quaternion(0.93648, 0.0119229, 0.00476592, 0.350487)
+bones/25/rotation = Quaternion(0.620133, 0.00798616, 0.0120978, 0.784363)
+bones/28/rotation = Quaternion(0.93648, -0.011923, -0.00476496, 0.350487)
+bones/29/rotation = Quaternion(0.620132, -0.00798624, -0.0120978, 0.784363)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00939941, 1.25307, -0.0809405)
+shape = SubResource("BoxShape3D_p0shb")
+
+[node name="MobDetector" type="Area3D" parent="." index="3"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MobDetector" index="0"]
+transform = Transform3D(3.00758, 0, 0, 0, 1.00155, 0, 0, 0, 1.19525, 0.00939941, 1.56414, 0.022326)
+shape = SubResource("CylinderShape3D_kqkdr")
+
+[connection signal="body_entered" from="MobDetector" to="." method="_on_mob_detector_body_entered"]

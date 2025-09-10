@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://clhcoxnedhpaq"]
+
+[ext_resource type="PackedScene" uid="uid://jv3imvgvudip" path="res://asset/Zombie.glb" id="1_da58a"]
+[ext_resource type="Script" uid="uid://b10bs23dl4erp" path="res://mob.gd" id="2_kew5q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_finw5"]
+size = Vector3(2.3103, 3.17478, 1.91504)
+
+[node name="MobV2" groups=["mob"] instance=ExtResource("1_da58a")]
+transform = Transform3D(0.81697, 0, 0, 0, 0.81697, 0, 0, 0, 0.81697, 0, 0, 0)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_kew5q")
+
+[node name="RootNode" parent="." index="0"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Skeleton3D" parent="RootNode/EnemyArmature" index="0"]
+bones/1/position = Vector3(0.00178264, 0.0101348, 0.000920984)
+bones/1/rotation = Quaternion(0.815108, -0.0270693, 0.0191692, -0.578359)
+bones/4/position = Vector3(-0.00178264, 0.0101348, 0.000920984)
+bones/4/rotation = Quaternion(0.902905, -0.0542213, -0.0796174, 0.418909)
+bones/7/position = Vector3(0, 0.0120928, 0)
+bones/7/rotation = Quaternion(0.085845, -0.00498063, -0.0577071, 0.994623)
+bones/8/position = Vector3(7.03655e-11, 0.00763029, 0.00284584)
+bones/8/rotation = Quaternion(3.72529e-09, -1.36228e-10, 2.36921e-11, 1)
+bones/11/position = Vector3(0.00475787, 0.00661106, 6.0536e-10)
+bones/11/rotation = Quaternion(0.0396855, 0.314538, 0.940955, -0.11872)
+bones/14/position = Vector3(-0.00415267, 0.00776447, 5.68107e-10)
+bones/14/rotation = Quaternion(0.046554, -0.359226, 0.924359, 0.119793)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00939942, 1.64763, -0.188721)
+shape = SubResource("BoxShape3D_finw5")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="." index="3"]
+transform = Transform3D(0.766063, 0, 0, 0, 1.52833, 0, 0, 0, 0.578346, 0, 1.4948, -0.211932)
+aabb = AABB(-1, -1.06798, -1.59354, 2, 2.13596, 3.18709)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]

@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cmn868j3xijqj"
-path="res://.godot/imported/Steve.glb-7c41f95ff2b351a75e38c1ba87a966cd.scn"
+uid="uid://b6u4hg6wg0ckv"
+path="res://.godot/imported/Steve01.glb-0bb747209e7dd954c21abccf675b27ad.scn"
 
 [deps]
 
-source_file="res://asset/Steve.glb"
-dest_files=["res://.godot/imported/Steve.glb-7c41f95ff2b351a75e38c1ba87a966cd.scn"]
+source_file="res://asset/Steve01.glb"
+dest_files=["res://.godot/imported/Steve01.glb-0bb747209e7dd954c21abccf675b27ad.scn"]
 
 [params]
 
-nodes/root_type="CharacterBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

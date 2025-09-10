@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://c437nc36cl3vw"]
 
 [ext_resource type="Script" uid="uid://cjmfbn6r44b2r" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://du41y3lmjaavd" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dqrl8y6r1hlol" path="res://mob.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://clhcoxnedhpaq" path="res://mob_v_2.tscn" id="2_7mycd"]
+[ext_resource type="PackedScene" uid="uid://x2o5oxg6yhxq" path="res://steveV.2.tscn" id="3_7mycd"]
 [ext_resource type="FontFile" uid="uid://di8nvvbhg6x03" path="res://fonts/Montserrat-Medium.ttf" id="4_lquwl"]
 [ext_resource type="Script" uid="uid://ds8myk8ywfvqi" path="res://score_label.gd" id="5_7mycd"]
 [ext_resource type="FontFile" uid="uid://c5wyj2n1eitm6" path="res://fonts/THSarabunNew Bold.ttf" id="6_7mycd"]
@@ -34,7 +34,7 @@ point_count = 4
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_h2yge")
-mob_scene = ExtResource("2_1bvp3")
+mob_scene = ExtResource("2_7mycd")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -51,14 +51,13 @@ mesh = SubResource("BoxMesh_ig7tw")
 transform = Transform3D(1, 0, 0, 0, 0.77878, 0.627297, 0, -0.627297, 0.77878, 0.079546, 4.47643, 0.113496)
 shadow_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
-[node name="CamaraPrivot" type="Marker3D" parent="Player"]
+[node name="Player" parent="." instance=ExtResource("3_7mycd")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Player/CamaraPrivot"]
-transform = Transform3D(1, 0, 0, 0, 0.793162, 0.609011, 0, -0.609011, 0.793162, 0, 16, 17.9037)
+[node name="CamaraPrivot" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CamaraPrivot"]
+transform = Transform3D(1, 0, 0, 0, 0.641342, 0.767255, 0, -0.767255, 0.641342, 0, 20.3491, 14.7133)
 fov = 37.7
 
 [node name="Cylinders" type="Node3D" parent="."]
