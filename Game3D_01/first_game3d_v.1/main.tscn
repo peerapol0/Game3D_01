@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c437nc36cl3vw"]
+[gd_scene load_steps=15 format=3 uid="uid://c437nc36cl3vw"]
 
 [ext_resource type="Script" uid="uid://cjmfbn6r44b2r" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://clhcoxnedhpaq" path="res://mob_v_2.tscn" id="2_7mycd"]
@@ -6,14 +6,15 @@
 [ext_resource type="FontFile" uid="uid://di8nvvbhg6x03" path="res://fonts/Montserrat-Medium.ttf" id="4_lquwl"]
 [ext_resource type="Script" uid="uid://ds8myk8ywfvqi" path="res://score_label.gd" id="5_7mycd"]
 [ext_resource type="FontFile" uid="uid://c5wyj2n1eitm6" path="res://fonts/THSarabunNew Bold.ttf" id="6_7mycd"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
-size = Vector3(60, 2, 60)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dxypte3ba4sr" path="res://art/prop2/Tree.glb" id="7_272bh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
-material = SubResource("StandardMaterial3D_ig7tw")
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_color = Color(1.23215e-05, 0.486578, 0.163673, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(60, 2, 60)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
@@ -41,15 +42,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 collision_layer = 4
 collision_mask = 0
 
+[node name="MeshInstance3D" type="CSGMesh3D" parent="Ground"]
+mesh = SubResource("BoxMesh_ig7tw")
+material = SubResource("StandardMaterial3D_272bh")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("BoxShape3D_7dm0k")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
-mesh = SubResource("BoxMesh_ig7tw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.77878, 0.627297, 0, -0.627297, 0.77878, 0.079546, 4.47643, 0.113496)
 shadow_enabled = true
+shadow_opacity = 0.98
+shadow_caster_mask = 4294966277
 
 [node name="Player" parent="." instance=ExtResource("3_7mycd")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
@@ -172,6 +176,15 @@ theme_override_fonts/font = ExtResource("4_lquwl")
 theme_override_font_sizes/font_size = 30
 text = "------press spacebar to retry-----"
 vertical_alignment = 1
+
+[node name="Tree" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0168257, 0, 0, 0, 0.0168257, 0, 0, 0, 0.0168257, 9.02994, 0, 11.1507)
+
+[node name="Tree2" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0168257, 0, 0, 0, 0.0168257, 0, 0, 0, 0.0168257, -8.3605, 0, 3.62343)
+
+[node name="Tree3" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(0.0168257, 0, 0, 0, 0.0168257, 0, 0, 0, 0.0168257, 10.6797, 0, -13.5107)
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

@@ -73,6 +73,7 @@ func _physics_process(delta):
 			# we check that we are hitting it from above.
 			if Vector3.UP.dot(collision.get_normal()) > 0.1:
 				# If so, we squash it and bounce.
+				$sfx_kill.play()
 				mob.squash()
 				target_velocity.y = bounce_impulse
 				# Prevent further duplicate calls.

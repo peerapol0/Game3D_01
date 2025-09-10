@@ -1,9 +1,5 @@
 res://main.tscn
-res://player.tscn
-res://Steve.tscn
-res://main.gd
-res://player.gd
-res://mob.tscn
 res://steveV.2.tscn
 res://mob_v_2.tscn
 res://mob.gd
+res://player.gd

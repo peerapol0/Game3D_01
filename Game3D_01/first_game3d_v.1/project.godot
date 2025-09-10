@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 MusicPlayer="*res://music_player.tscn"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 Move_left={
@@ -49,6 +53,9 @@ Jump={
 
 [layer_names]
 
+3d_render/layer_1="player"
+3d_render/layer_2="tree"
+3d_render/layer_3="monster"
 3d_physics/layer_1="player"
 3d_physics/layer_2="Mob"
 3d_physics/layer_3="Ground"

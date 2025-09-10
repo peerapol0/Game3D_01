@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://x2o5oxg6yhxq"]
+[gd_scene load_steps=6 format=3 uid="uid://x2o5oxg6yhxq"]
 
 [ext_resource type="PackedScene" uid="uid://cmn868j3xijqj" path="res://asset/Steve.glb" id="1_3rfhq"]
 [ext_resource type="Script" uid="uid://ubyjv8broxh" path="res://player.gd" id="2_kpvr4"]
+[ext_resource type="AudioStream" uid="uid://blsol6fqai1mn" path="res://art/sfx_kill.mp3" id="3_kpvr4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p0shb"]
 size = Vector3(2.3103, 2.50095, 0.840531)
@@ -40,5 +41,8 @@ monitorable = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MobDetector" index="0"]
 transform = Transform3D(3.00758, 0, 0, 0, 1.00155, 0, 0, 0, 1.19525, 0.00939941, 1.56414, 0.022326)
 shape = SubResource("CylinderShape3D_kqkdr")
+
+[node name="sfx_kill" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("3_kpvr4")
 
 [connection signal="body_entered" from="MobDetector" to="." method="_on_mob_detector_body_entered"]

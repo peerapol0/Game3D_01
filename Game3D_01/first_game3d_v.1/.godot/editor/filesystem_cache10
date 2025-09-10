@@ -1,19 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1757495523
+::res://::1757498622
 icon.svg::CompressedTexture2D/CompressedTexture2D::6179827941960638405::1757491539::1757491606::1::::<><><>0<>0<>4fe0667d37cb98fc3caecdc481e95501<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.gd::GDScript::5429619595439734723::1757494477::0::1::::<>Node3D<><>0<>0<><>::
-main.tscn::PackedScene::6868086718804965672::1757495114::0::1::::<><><>0<>0<><>::uid://cjmfbn6r44b2r::::res://main.gd<>uid://dqrl8y6r1hlol::::res://mob.tscn<>uid://x2o5oxg6yhxq::::res://steveV.2.tscn<>uid://di8nvvbhg6x03::::res://fonts/Montserrat-Medium.ttf<>uid://ds8myk8ywfvqi::::res://score_label.gd<>uid://c5wyj2n1eitm6::::res://fonts/THSarabunNew Bold.ttf
-mob.gd::GDScript/GDScript::4263034384953620569::1757491539::0::1::::<>CharacterBody3D<><>0<>0<><>::
-mob.tscn::PackedScene::8318106098482905803::1757495114::0::1::::<><><>0<>0<><>::uid://b10bs23dl4erp::::res://mob.gd<>uid://jv3imvgvudip::::res://asset/Zombie.glb
-mob_v_2.tscn::PackedScene::5559516955088732148::1757495466::0::1::::<><><>0<>0<><>::uid://jv3imvgvudip::::res://asset/Zombie.glb
+main.gd::GDScript/GDScript::5429619595439734723::1757494477::0::1::::<>Node3D<><>0<>0<><>::
+main.tscn::PackedScene/PackedScene::6868086718804965672::1757498415::0::1::::<><><>0<>0<><>::uid://cjmfbn6r44b2r::::res://main.gd<>uid://clhcoxnedhpaq::::res://mob_v_2.tscn<>uid://x2o5oxg6yhxq::::res://steveV.2.tscn<>uid://di8nvvbhg6x03::::res://fonts/Montserrat-Medium.ttf<>uid://ds8myk8ywfvqi::::res://score_label.gd<>uid://c5wyj2n1eitm6::::res://fonts/THSarabunNew Bold.ttf<>uid://dxypte3ba4sr::::res://art/prop2/Tree.glb
+mob.gd::GDScript/GDScript::4263034384953620569::1757496314::0::1::::<>CharacterBody3D<><>0<>0<><>::
+mob.tscn::PackedScene/PackedScene::8318106098482905803::1757496778::0::1::::<><><>0<>0<><>::uid://b10bs23dl4erp::::res://mob.gd<>uid://jv3imvgvudip::::res://asset/Zombie.glb
+mob_v_2.tscn::PackedScene/PackedScene::5559516955088732148::1757498415::0::1::::<><><>0<>0<><>::uid://jv3imvgvudip::::res://asset/Zombie.glb<>uid://b10bs23dl4erp::::res://mob.gd
 music_player.tscn::PackedScene/PackedScene::7946557221048788218::1757491539::0::1::::<><><>0<>0<><>::uid://bkfaacqylvtl5::::res://art/House In a Forest Loop.ogg
-player.gd::GDScript::41391637780113989::1757495114::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.gd::GDScript/GDScript::41391637780113989::1757496693::0::1::::<>CharacterBody3D<><>0<>0<><>::
 player.tscn::PackedScene/PackedScene::8624528867777235357::1757492585::0::1::::<><><>0<>0<><>::uid://cmn868j3xijqj::::res://asset/Steve.glb
 score_label.gd::GDScript/GDScript::8491557742746891844::1757491539::0::1::::<>Label<><>0<>0<><>::
 Steve.tscn::PackedScene/PackedScene::4941183433482278431::1757492933::0::1::::<><><>0<>0<><>::uid://ubyjv8broxh::::res://player.gd<>uid://bbfx6uu8802i::::res://asset/Steve_Atlas.png
-steveV.2.tscn::PackedScene::1670985985922630890::1757495114::0::1::::<><><>0<>0<><>::uid://cmn868j3xijqj::::res://asset/Steve.glb<>uid://ubyjv8broxh::::res://player.gd
+steveV.2.tscn::PackedScene/PackedScene::1670985985922630890::1757498415::0::1::::<><><>0<>0<><>::uid://cmn868j3xijqj::::res://asset/Steve.glb<>uid://ubyjv8broxh::::res://player.gd
 zombie.tscn::PackedScene/PackedScene::8022248973853199319::1757491539::0::1::::<><><>0<>0<><>::uid://jv3imvgvudip::::res://asset/Zombie.glb
-::res://art/::1757491607
+::res://art/::1757498622
 body.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
 eye.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
 House In a Forest Loop.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::3098631139713292344::1757491539::1757491606::1::::<><><>0<>0<>57c992fa1414f01fb8c5e78c985c2ecf<>res://.godot/imported/House In a Forest Loop.ogg-1a6a72ae843ad792b7039931227e8d50.oggvorbisstr::
@@ -22,6 +22,23 @@ mob_body.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::
 mob_eye.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
 player.glb::PackedScene/PackedScene::5421085625153052635::1757491539::1757491607::1::::<><><>0<>0<>767adbf7e5c174b9c287c7be9f3b7fb4<>res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn::
 pupil.material::StandardMaterial3D/StandardMaterial3D::-1::1757491539::0::1::::<><><>0<>0<><>::
+sfx_kill.mp3::AudioStreamMP3::3196528081591405837::1757498607::1757498622::1::::<><><>0<>0<>9c03a8e93fb740382737b8c123c8b90b<>res://.godot/imported/sfx_kill.mp3-38c5c3237cd5501a2e64bf8c05483c71.mp3str::
+::res://art/prop/::1757497326
+Low_Poly_Bush_001.fbx::PackedScene/PackedScene::6132663097341019048::1757497324::1757497325::1::::<><><>0<>0<>71e4421db83286e9cac9ff1061294eba<>res://.godot/imported/Low_Poly_Bush_001.fbx-8ecc730783e57b4c9be7bc315b14007d.scn::
+Low_Poly_Bush_002.fbx::PackedScene/PackedScene::6235108289735117459::1757497324::1757497325::1::::<><><>0<>0<>ed2d15f9f61d410eb552469cc242b490<>res://.godot/imported/Low_Poly_Bush_002.fbx-8cdcb959c4e82f26229009a98b35435e.scn::
+Low_Poly_Grass_001.fbx::PackedScene/PackedScene::3116038798535363784::1757497324::1757497325::1::::<><><>0<>0<>a4fac1dbdd02fde891d0af8920561817<>res://.godot/imported/Low_Poly_Grass_001.fbx-285e62f8eadae51d2ba01ed119675ba4.scn::
+Low_Poly_Grass_002.fbx::PackedScene/PackedScene::4361064568022391264::1757497324::1757497325::1::::<><><>0<>0<>6b4a6b7f0b14c2d122160b88f245a2ba<>res://.godot/imported/Low_Poly_Grass_002.fbx-b80b2052a84bd6350c063e41e1a27bef.scn::
+Low_Poly_Tree_001.fbx::PackedScene/PackedScene::7840758472633716330::1757497324::1757497325::1::::<><><>0<>0<>262e133da5920f047809f31894bb6eb9<>res://.godot/imported/Low_Poly_Tree_001.fbx-05150f84ec7a872ce1d5eeedcbe3deb5.scn::
+Low_Poly_Tree_002.fbx::PackedScene/PackedScene::2910569674187749244::1757497324::1757497325::1::::<><><>0<>0<>2a7ea46e036aa306091dfdba95af93eb<>res://.godot/imported/Low_Poly_Tree_002.fbx-bf8dc59bdc7a81de4bc366f91421e43f.scn::
+Low_Poly_Tree_003.fbx::PackedScene/PackedScene::7434001481787999668::1757497324::1757497325::1::::<><><>0<>0<>49a79b6ac46c35c8b88dc36f05a4761b<>res://.godot/imported/Low_Poly_Tree_003.fbx-75ceba29acb2f498b9eea8592bb41181.scn::
+Low_Poly_Tree_004.fbx::PackedScene/PackedScene::3227399732572026851::1757497324::1757497325::1::::<><><>0<>0<>1c8345df5d230842f7ad4b841609e458<>res://.godot/imported/Low_Poly_Tree_004.fbx-2f542d2f27f46e0401ba00db26d2a506.scn::
+Low_Poly_Tree_005.fbx::PackedScene/PackedScene::5418473124022856160::1757497324::1757497325::1::::<><><>0<>0<>b2525066b6b2abae3891422a715324f5<>res://.godot/imported/Low_Poly_Tree_005.fbx-eacef50527281e8b0f9d2312e48d1f26.scn::
+Low_Poly_Tree_006.fbx::PackedScene/PackedScene::7191895238602943639::1757497324::1757497325::1::::<><><>0<>0<>bb31c98c976ac16a2327798c4f8f93ba<>res://.godot/imported/Low_Poly_Tree_006.fbx-614fc9b42306cdb86786823462f08044.scn::
+Low_Poly_Tree_Stump_001.fbx::PackedScene/PackedScene::277881831948765121::1757497324::1757497325::1::::<><><>0<>0<>6f74793fefd357c67669e3f09754af54<>res://.godot/imported/Low_Poly_Tree_Stump_001.fbx-f01bcbc3d9372937d275e7f650a1fc6e.scn::
+Low_Poly_Tree_Stump_002.fbx::PackedScene/PackedScene::2402051737925957842::1757497324::1757497326::1::::<><><>0<>0<>8582dd5e282b89352d1ac5116a09942b<>res://.godot/imported/Low_Poly_Tree_Stump_002.fbx-873ad26fe656a3209de08356e3d64fa2.scn::
+::res://art/prop2/::1757498622
+Tree.glb::PackedScene/PackedScene::259532219388873337::1757497489::1757497490::1::::<><><>0<>0<>0931c0801211a4acf439ea44a4deb190<>res://.godot/imported/Tree.glb-eb23a973e11b20845881bba4aeab233b.scn::uid://c5pty65hinbe5::::res://art/prop2/Tree_tree_texture.png
+Tree_tree_texture.png::CompressedTexture2D/CompressedTexture2D::6910670499651588466::1757497490::1757497490::1::::<><><>0<>0<>aad63cb5c270ef0a9abecd8b752ccb8d<>res://.godot/imported/Tree_tree_texture.png-b52d74be9ce58bc9426d6cfc063cfc6a.s3tc.ctex::
 ::res://asset/::1757495523
 Steve01.glb::PackedScene/PackedScene::4605336048938482585::1757493292::1757493293::1::::<><><>0<>0<>2983cb1e6e23d7489cb4d49ab68f8167<>res://.godot/imported/Steve01.glb-0bb747209e7dd954c21abccf675b27ad.scn::uid://bf7lcqdrb7mrq::::res://asset/Steve01_Atlas.png
 Steve01_Atlas.png::CompressedTexture2D/CompressedTexture2D::2804097294304442994::1757493293::1757493293::1::::<><><>0<>0<>8530bbe0e9b98e0d037dedb8fd5b274d<>res://.godot/imported/Steve01_Atlas.png-df94ed8409704c0dc66555d83d059d37.s3tc.ctex::
